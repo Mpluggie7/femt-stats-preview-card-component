@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  --Soft-violet: hsl(277, 64%, 61%);
+
+  --White: hsl(0, 0%, 100%);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 400 */
+.font-L {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* 400, 700 */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  background-color: var(--Very-dark-blue);
+  color: var(--White);
+}
+
+p {
+  font-size: 14px;
+  line-height: 180%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75em;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.25em;
+}
+
+.frame {
+  width: 375px;
+  margin: 28px;
+  background-color: var(--Dark-desaturated-blue);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.imgBlock {
+  position: relative;
+  height: 275px;
+}
+
+.headerImg-mobile {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  filter: contrast(1.6);
+}
+
+.headerImg-desktop {
+  display: none;
+}
+
+.article {
+  padding: 12px 36px;
+}
+
+.overlayImg {
+  position: absolute;
+  content: "";
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 15px 15px 0 0;
+  background-color: hsl(277 100% 51%);
+  opacity: 0.5;
+}
+
+.article h1 span {
+  color: var(--Soft-violet);
+}
+
+.stat {
+  margin: 20px 0;
+}
+
+.stat p {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+@media (min-width: 567px) {
+  .frame {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 48px;
+    width: 960px;
+    text-align: left;
+  }
+
+  .headerImg-mobile {
+    display: none;
+  }
+
+  .headerImg-desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    filter: contrast(1.6);
+  }
+
+  .overlayImg {
+    border-radius: 0 15px 15px 0;
+  }
+
+  .imgBlock {
+    width: 50%;
+    height: 100%;
+  }
+
+  .article {
+    width: 50%;
+    padding: 0 56px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .statBlock {
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
